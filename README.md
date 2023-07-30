@@ -1,1 +1,1 @@
-# AutoMata-Project
+# AutomataProject

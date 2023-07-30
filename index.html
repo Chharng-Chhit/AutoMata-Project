@@ -1,12 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Finite Automata</title>
+    <link rel="stylesheet" href="./asset/Style/input.css">
+    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
 </head>
+
 <body>
-    
+    <div class="wrapper">
+        <h1 class="title">
+            Finite Automata Simulation
+        </h1>
+        <div class="container">
+            <button type="button" id="resetBtn" class="btn">Reset</button>
+            <form action="form-horizontal">
+                <div class="faInput">
+                    <p class="fa">FA</p>
+                    <div class="forInput">
+                        <label for="allState">All States:</label>
+                        <input type="text" id="allStates" title="all State" placeholder="q0, q1, q2, ...">
+                    </div>
+                    <div class="forInput">
+                        <label for="alphabets">Alphabets:</label>
+                        <input type="text" id="alphabets" title="alphabets" placeholder="a, b, ...">
+                    </div>
+                    <div class="startState forInput">
+                        <label for="startState">Start state:</label>
+                        <input type="text" id="startState" title="start state" placeholder="q1">
+                    </div>
+                    <div class="forInput">
+                        <label for="acceptState">Accept State(s):</label>
+                        <input type="text" id="acceptState" title="accept state" placeholder="q2, q3, ...">
+                    </div>
+                    <input type="button" id="addTransition" class="btn" value="Add Transition">
+
+                    <div id="transitions"></div>
+                </div>
+
+            <div class="visual">
+                <button type="button" class="btn" id="visualization" title="Visualize the FAs">
+                    Visualize</button>
+            </div>
+
+            <div class="typeofFA">
+                <p>Type of FA:</p>
+                <span id="typeFA">N/A</span>
+                
+            </div>
+
+            <div class="testString">
+                <input type="button" id="forTest" value="Test">
+                <p class="test" id="test1">Test String</p>
+                <div class="inputString">
+                    <label for="inputString">Input String: </label>
+                    <input type="text" name="" title="test string" id="inputString">
+                </div>
+                <div class="result">
+                    <p>Result: </p>
+                    <span id="result">N/A</span>
+                </div>
+            </div>
+
+            <div class="N2D">
+                <button type="button" class="btn" id="nfa2dfa" title="DFA to NFA"> NFA to DFA</button>
+                <div class="output">
+                    <h2 class="classTransition">DFA Output From NFA</h2>
+                    <div id="outputDFAConvert"></div>
+                </div>
+            </div>
+
+            <div class="Minamize">
+                <button type="button" class="btn" id="Minimize" title="DFA to NFA">Minizize DFA</button>
+                <div class="output">
+                    <h2 class="classTransition">Minimize DFA</h2>
+                    <div id="OutputMinimize"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="./finiteAutomata.js"></script>
+
 </html>
+<!-- update -->
